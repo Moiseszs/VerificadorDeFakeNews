@@ -1,0 +1,10 @@
+div {
+  font-family: sans-serif;
+}
+
+.mat-toolbar-row {
+  margin-bottom: 20px;
+  -webkit-box-shadow: 10px 10px 21px -19px rgba(120, 120, 120, 1);
+  -moz-box-shadow: 10px 10px 21px -19px rgba(120, 120, 120, 1);
+  box-shadow: 10px 10px 21px -19px rgba(120, 120, 120, 1);
+}

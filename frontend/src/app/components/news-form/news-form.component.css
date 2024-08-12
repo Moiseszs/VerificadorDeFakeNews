@@ -1,0 +1,43 @@
+:root {
+  font-family: sans-serif;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: white;
+}
+
+.content {
+  display: block;
+}
+
+form {
+  padding: 45px;
+}
+
+input,
+textarea {
+  width: 40vh;
+  height: 7vh;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+input {
+  height: 2vh;
+}
+
+span.red {
+  color: rgba(221, 48, 48, 0.932);
+}
+
+span.orange {
+  color: rgb(196, 137, 29);
+}
+
+.card {
+  padding: 5px;
+}
+
+.set-chips {
+  padding: 5px;
+}

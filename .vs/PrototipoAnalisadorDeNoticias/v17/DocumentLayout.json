@@ -1,0 +1,196 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\logic\\uolconferescraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\logic\\uolconferescraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\models\\checkingsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|solutionrelative:models\\checkingsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\logic\\estadaoverificarscraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\logic\\estadaoverificarscraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\logic\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\logic\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\models\\recordmodels\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|solutionrelative:models\\recordmodels\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89982279-66DD-4A55-ADB0-86B5ADA9766A}|Models\\Models.csproj|solutionrelative:models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|c:\\users\\moise\\source\\repos\\prototipoanalisadordenoticias\\prototipoanalisadordenoticias\\logic\\iscraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51E8F0C-AFFD-49EC-A631-6A587C4452C7}|PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias.csproj|solutionrelative:prototipoanalisadordenoticias\\logic\\iscraper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 754,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UolConfereScraper.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\UolConfereScraper.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\UolConfereScraper.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\UolConfereScraper.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\UolConfereScraper.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAowDgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:51:46.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Controllers\\NewsController.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Controllers\\NewsController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAqwCsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:50:33.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Search.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwCoAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T20:09:03.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IScraper.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\IScraper.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\IScraper.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\IScraper.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\IScraper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:49:56.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckingSource.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\CheckingSource.cs",
+              "RelativeDocumentMoniker": "Models\\CheckingSource.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\CheckingSource.cs",
+              "RelativeToolTip": "Models\\CheckingSource.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAowA8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:46:27.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EstadaoVerificarScraper.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\EstadaoVerificarScraper.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\EstadaoVerificarScraper.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\EstadaoVerificarScraper.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\EstadaoVerificarScraper.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAIAywCYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:45:40.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Program.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Program.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Program.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T19:38:26.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\RecordModels\\Item.cs",
+              "RelativeDocumentMoniker": "Models\\RecordModels\\Item.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\RecordModels\\Item.cs",
+              "RelativeToolTip": "Models\\RecordModels\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T18:24:29.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "News.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\News.cs",
+              "RelativeDocumentMoniker": "Models\\News.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\Models\\News.cs",
+              "RelativeToolTip": "Models\\News.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T19:56:09.123Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 294,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
