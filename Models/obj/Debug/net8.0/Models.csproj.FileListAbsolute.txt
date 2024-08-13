@@ -11,3 +11,4 @@ C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\Models\obj\Debug\net8.
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\Models\obj\Debug\net8.0\Models.pdb
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\Models\obj\Debug\net8.0\ref\Models.dll
+C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\Models\obj\Debug\net8.0\Models.sourcelink.json

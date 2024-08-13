@@ -78,7 +78,8 @@
               "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\UolConfereScraper.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAowDgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T19:51:46.525Z"
+              "WhenOpened": "2024-08-02T19:51:46.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,7 +104,8 @@
               "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAIwCoAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T20:09:03.185Z"
+              "WhenOpened": "2024-08-02T20:09:03.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,7 +141,8 @@
               "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\EstadaoVerificarScraper.cs",
               "ViewState": "AQIAABUAAAAAAAAAAIAywCYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T19:45:40.336Z"
+              "WhenOpened": "2024-08-02T19:45:40.336Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -149,7 +152,7 @@
               "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Program.cs",
               "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Program.cs",
               "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T19:38:26.232Z",
               "EditorCaption": ""
