@@ -21,10 +21,8 @@ namespace PrototipoAnalisadorDeNoticias.Logic
 
         public async Task<String> GoogleSearchOfKeywords()
         {
-            Search search = new Search(news.Title);
             try
             {
-                await search.FetchQuery();
                 var searchList = await search.GetFromSpecificSite(ESTADAO_SITENAME);
                 var selectedSearch = searchList.FirstOrDefault();
                 return selectedSearch.link;
@@ -32,7 +30,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             catch(Exception e)
             {
                 throw new Exception("Erro finding results");
+                return null;
             }
+
             
         }
 
@@ -40,15 +40,14 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         {
             string pageLink = "";
             CheckingSource source = new CheckingSource();
-            try
+
+            pageLink = await GoogleSearchOfKeywords();
+
+            if(pageLink == null)
             {
-                pageLink = await GoogleSearchOfKeywords();
+                return null;
             }
-            catch(Exception e)
-            {
-                source.Veridict = "Sem resultado";
-                return news;
-            }
+
             var config = Configuration.Default.WithDefaultLoader();
             var context = BrowsingContext.New(config);
             var document = await context.OpenAsync(pageLink);
@@ -74,6 +73,8 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 news.checkingSources.Add(source);
                 return news;
             }
+
+
             source.News = news;
             source.Veridict = "indefinido";
             news.checkingSources.Add(source);

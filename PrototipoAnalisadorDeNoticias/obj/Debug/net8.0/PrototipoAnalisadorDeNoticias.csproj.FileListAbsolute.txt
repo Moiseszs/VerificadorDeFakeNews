@@ -146,8 +146,4 @@ C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeN
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\DotNetEnv.dll
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\Sprache.dll
-C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\linux-build\appsettings.Development.json
-C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\linux-build\appsettings.json
-C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\linux-build\PrototipoAnalisadorDeNoticias.deps.json
-C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\bin\Debug\net8.0\linux-build\PrototipoAnalisadorDeNoticias.runtimeconfig.json
 C:\Users\moise\source\repos\PrototipoAnalisadorDeNoticias\PrototipoAnalisadorDeNoticias\obj\Debug\net8.0\PrototipoAnalisadorDeNoticias.sourcelink.json

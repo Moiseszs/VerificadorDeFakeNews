@@ -55,7 +55,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 if (textContent.Contains("falso"))
                 {
                     source.News = news;
-                    source.Veridict = "verdadeiro";
+                    source.Veridict = "enganoso";
                     news.checkingSources.Add(source);
                     return news;
                 }
@@ -69,13 +69,13 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 else if (textContent.Contains("verdadeiro"))
                 {
                     source.News = news;
-                    source.Veridict = "distorcido";
+                    source.Veridict = "verdadeiro";
                     news.checkingSources.Add(source);
                     return news;
                 }
             }
             source.News = news;
-            source.Veridict = "distorcido";
+            source.Veridict = "indefinido";
             news.checkingSources.Add(source);
             return news;
         }

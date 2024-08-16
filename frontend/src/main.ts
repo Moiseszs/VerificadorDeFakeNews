@@ -6,5 +6,5 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 bootstrapApplication(AppComponent, appConfig).catch((err) =>
-  console.error(err);
+  console.error(err)
 );
