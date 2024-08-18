@@ -83,6 +83,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 source.News = news;
                 source.Veridict = "indefinido";
                 news.checkingSources.Add(source);
+
             }
 
             return news;
