@@ -11,7 +11,7 @@ env:
   AZURE_APIM_SERVICENAME: PrototipoAnalisadorDeNoticiasapi
   AZURE_APIM_API_ID: PrototipoAnalisadorDeNoticias
   AZURE_APIM_APPSERVICEURL: https://verificadordefakenews.azurewebsites.net
-  SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 6.4.x
+  SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 6.7.x
   SWASHBUCKLE_DOTNET_CORE_VERSION: 8.0.x
   API_IMPORT_SPECIFICATION_PATH: PrototipoAnalisadorDeNoticias\publish\swagger.json
   API_IMPORT_DLL: PrototipoAnalisadorDeNoticias\bin\Release\net8.0\PrototipoAnalisadorDeNoticias.dll
