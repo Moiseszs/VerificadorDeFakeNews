@@ -2,7 +2,7 @@
 using Models.RecordModels;
 using System.Linq;
 using System.Text;
-using System.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace PrototipoAnalisadorDeNoticias.Logic
 {
@@ -19,7 +19,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
 
         private string GetServerURL()
         {
-            ConfigurationManager configuration = new ConfigurationManager();
+            var confBuilder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory());
+            IConfiguration configuration = confBuilder.Build();
             return configuration.GetConnectionString("API_URL");
         }
 
@@ -38,7 +40,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         {
             StringBuilder builder = new StringBuilder();
             builder.Append(DotNetEnv.Env.GetString("BASE_URL"));
-            builder.AppendJoin("", ["key=", GetServerURL]);
+            builder.AppendJoin("", ["key=", GetServerURL()]);
             builder.AppendJoin("", ["&q=", SearchQuery]);
             return builder.ToString();
         }
