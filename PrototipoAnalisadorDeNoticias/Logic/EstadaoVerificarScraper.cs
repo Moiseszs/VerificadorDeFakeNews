@@ -1,4 +1,6 @@
 ﻿using AngleSharp;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Models;
 using Models.RecordModels;
 
@@ -29,12 +31,13 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             }
             catch(Exception e)
             {
-                throw new Exception("Erro finding results");
+                throw new Exception("Error finding results");
                 return null;
             }
 
             
         }
+
 
         public async Task<News> VerifyNews()
         {
@@ -54,10 +57,11 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             
             source.SourceSite = ESTADAO_SITENAME;
 
-            if (document.Body.TextContent
-                .Contains("O Estadão Verifica investigou e concluiu que: é enganoso") ||
-                document.Body.TextContent
-                .Contains("O Estadão Verifica investigou e concluiu que: é falso"))
+            string statement = "O Estadão Verifica investigou e concluiu que: ";
+
+
+            if (document.Body.TextContent.Contains($"{statement}: é enganoso") ||
+                document.Body.TextContent.Contains($"{statement}: é falso"))
             {
                 source.News = news;
                 source.Veridict = "enganoso";
@@ -65,8 +69,8 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 return news;
             }
             else if (document.Body.TextContent
-                .Contains("O Estadão Verifica investigou e concluiu que: é verdadeiro") ||document.Body.TextContent
-                .Contains("O Estadão Verifica investigou e concluiu que: é veridico"))
+                .Contains($"{statement}: é verdadeiro") ||document.Body.TextContent
+                .Contains($"{statement}: é verídico"))
             {
                 source.News = news;
                 source.Veridict = "verdadeiro";

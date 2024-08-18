@@ -2,6 +2,7 @@
 using Models.RecordModels;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 
 namespace PrototipoAnalisadorDeNoticias.Logic
 {
@@ -15,6 +16,12 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         }
 
         public List<Item> items { get; set; }
+
+        private string GetServerURL()
+        {
+            ConfigurationManager configuration = new ConfigurationManager();
+            return configuration.GetConnectionString("API_URL");
+        }
 
         public async Task<List<Item>> FetchQuery()
         {
@@ -31,8 +38,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         {
             StringBuilder builder = new StringBuilder();
             builder.Append(DotNetEnv.Env.GetString("BASE_URL"));
-            builder.AppendJoin("", ["key=", DotNetEnv.Env.GetString("API_KEY")]);
-            builder.AppendJoin("", ["&cx=", DotNetEnv.Env.GetString("SEARCH_ID")]);
+            builder.AppendJoin("", ["key=", GetServerURL]);
             builder.AppendJoin("", ["&q=", SearchQuery]);
             return builder.ToString();
         }

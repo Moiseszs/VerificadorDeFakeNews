@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Models;
 using Models.RecordModels;
 
 namespace PrototipoAnalisadorDeNoticias.Logic
