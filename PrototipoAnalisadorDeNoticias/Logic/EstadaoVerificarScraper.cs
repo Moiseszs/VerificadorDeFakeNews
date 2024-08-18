@@ -31,8 +31,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             }
             catch(Exception e)
             {
+                return "";
                 throw new Exception("Error finding results");
-                return null;
+                
             }
 
             
