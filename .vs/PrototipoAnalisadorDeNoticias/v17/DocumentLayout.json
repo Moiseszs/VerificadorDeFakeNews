@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 754,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Search.cs",
-              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
-              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
-              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
-              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T22:18:38.716Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -59,6 +46,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Search.cs",
+              "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "RelativeDocumentMoniker": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "ToolTip": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\Logic\\Search.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T22:18:38.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\moise\\source\\repos\\PrototipoAnalisadorDeNoticias\\PrototipoAnalisadorDeNoticias\\appsettings.json",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "PrototipoAnalisadorDeNoticias\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-18T20:28:41.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-18T20:28:41.666Z"
             }
           ]
         },

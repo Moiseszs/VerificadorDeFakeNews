@@ -39,8 +39,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         public string BuildUrl()
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append(DotNetEnv.Env.GetString("BASE_URL"));
-            builder.AppendJoin("", ["key=", GetServerURL()]);
+            builder.AppendJoin("", GetServerURL());
             builder.AppendJoin("", ["&q=", SearchQuery]);
             return builder.ToString();
         }
