@@ -19,11 +19,8 @@ namespace PrototipoAnalisadorDeNoticias.Logic
 
         private string GetServerURL()
         {
-            var confBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory());
-            IConfiguration configuration = confBuilder.Build();
 
-            return configuration.GetConnectionString("CUSTOMCONNSTR_API_URL");
+            return Environment.GetEnvironmentVariable("API_URL");
 
         }
 
