@@ -22,15 +22,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             var confBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory());
             IConfiguration configuration = confBuilder.Build();
-            try
-            { 
-                return configuration.GetConnectionString("API_URL");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(configuration.GetConnectionString("API_URL"));
-            }
-            return "";
+
+            return configuration.GetConnectionString("CUSTOMCONNSTR_API_URL");
+
         }
 
         public async Task<List<Item>> FetchQuery()
