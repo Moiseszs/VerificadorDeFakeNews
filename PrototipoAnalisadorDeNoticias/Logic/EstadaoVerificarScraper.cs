@@ -58,7 +58,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             
             source.SourceSite = ESTADAO_SITENAME;
 
-            string statement = "O Estadão Verifica investigou e concluiu que: ";
+            string statement = "O Estadão Verifica investigou e concluiu que";
 
 
             if (document.Body.TextContent.Contains($"{statement}: é enganoso") ||
