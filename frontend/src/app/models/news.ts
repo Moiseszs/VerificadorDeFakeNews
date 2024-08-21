@@ -1,8 +1,8 @@
-import { CheckingSource } from "./checkingSource";
+import { CheckingSource } from './checkingSource';
 
 export interface News {
-    id: number;
-    title: string;
-    url?: string
-    checkingSources: CheckingSource[]
+  id: number;
+  title: string;
+  url?: string;
+  checkingSources: CheckingSource[];
 }

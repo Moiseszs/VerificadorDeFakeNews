@@ -22,5 +22,6 @@ namespace Models
 
         public string SourceSite { get; set; }
         
+        public List<string>? relatedHeadlines { get; set; }
     }
 }

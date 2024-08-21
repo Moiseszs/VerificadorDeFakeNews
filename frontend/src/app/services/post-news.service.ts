@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PostNewsService {
   url = 'https://verificadordefakenews.azurewebsites.net/api/news';
+  localUrl = 'https://localhost:7297/api/news';
 
   constructor(private http: HttpClient) {}
 
@@ -18,7 +19,7 @@ export class PostNewsService {
   };
 
   doPost(news: News): Observable<News> {
-    return this.http.post<News>(this.url, news);
+    return this.http.post<News>(this.localUrl, news);
   }
 
   async Get() {

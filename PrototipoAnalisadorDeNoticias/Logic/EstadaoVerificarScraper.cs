@@ -58,6 +58,8 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             
             source.SourceSite = ESTADAO_SITENAME;
 
+            source.relatedHeadlines = await GetRelatedInfo();
+
             string statement = "O Estadão Verifica investigou e concluiu que";
 
 
@@ -83,11 +85,39 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 source.News = news;
                 source.Veridict = "indefinido";
                 news.checkingSources.Add(source);
-
             }
+
+            
 
             return news;
             
         }
+
+        public async Task<List<string>> GetRelatedInfo()
+        {
+            string pageLink = await GoogleSearchOfKeywords();
+
+            if (pageLink == null)
+            {
+                return null;
+            }
+
+            var config = Configuration.Default.WithDefaultLoader();
+            var context = BrowsingContext.New(config);
+            var document = await context.OpenAsync(pageLink);
+
+            var content = document.QuerySelectorAll(".items > a > .content > h3");
+
+            List<string> headlines = new List<string>();
+
+            foreach(var h3 in content)
+            {
+                headlines.Add(h3.TextContent);
+            }
+
+            return headlines;
+        }
     }
+
+    
 }

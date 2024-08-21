@@ -6,6 +6,7 @@ using AngleSharp;
 using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using Models.RecordModels;
+using OpenQA.Selenium.DevTools.V125.WebAudio;
 
 namespace PrototipoAnalisadorDeNoticias.Logic
 {
@@ -49,6 +50,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             var bulletDivs = document.QuerySelectorAll("h2.bullet");
             CheckingSource source = new CheckingSource();
             source.SourceSite = UOL_SITENAME;
+
+            source.relatedHeadlines = await GetRelatedInfo();
+
             foreach(var h in bulletDivs)
             {
                 var textContent = h.TextContent;
@@ -78,6 +82,33 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             source.Veridict = "indefinido";
             news.checkingSources.Add(source);
             return news;
+        }
+
+        public async Task<List<string>> GetRelatedInfo()
+        {
+
+            string pageLink = await GoogleSearchOfKeywords();
+
+
+            var config = Configuration.Default.WithDefaultLoader();
+            var context = BrowsingContext.New(config);
+            var document = await context.OpenAsync(pageLink);
+
+
+            var content = document.
+                QuerySelectorAll(".mt-100.mt-150-lg.container  .solar-related.type-main  .container-main.column div");
+
+            content = content;
+
+
+            List<string> headlines = new List<string>();
+
+            foreach(var div in content)
+            {
+                headlines.Add(div.TextContent);
+            }
+
+            return headlines;
         }
 
     }

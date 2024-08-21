@@ -1,44 +1,67 @@
-<div class="content" fxLayout="column" fxLayoutAlign="center center">
-  <form
-    (ngSubmit)="onSubmit()"
-    fxLayout="column"
-    fxLayoutAlign="space-around center "
-  >
-    <input
-      name="url"
-      [(ngModel)]="news.url"
-      placeholder="URL do artigo (opcional)"
-    />
-    <textarea
-      name="title"
-      [(ngModel)]="news.title"
-      placeholder="Título ou palavras-chave da notícia"
-    ></textarea>
+<div fxLayout="column" fxFil fxLayoutAlign="space-around center">
+  <div class="content" fxLayout="column" fxLayoutAlign="center center">
+    <form
+      (ngSubmit)="onSubmit()"
+      fxLayout="column"
+      fxLayoutAlign="space-around center "
+    >
+      <input
+        name="url"
+        [(ngModel)]="news.url"
+        placeholder="URL do artigo (opcional)"
+      />
+      <textarea
+        name="title"
+        [(ngModel)]="news.title"
+        placeholder="Título ou palavras-chave da notícia"
+      ></textarea>
 
-    <button type="submit" mat-raised-button>Enviar</button>
-  </form>
-</div>
+      <button type="submit" mat-raised-button>Enviar</button>
+    </form>
+  </div>
 
-<div fxLayout="column">
-  @if (result$ | async; as result){
-  <span style="text-align: center">Resultados</span>
-  <div fxLayout="row wrap" fxLayoutAlign="center center">
-    <div fxLayout="row wrap" fxLayoutGap="10px" class="result-container">
+  <div fxLayout="column">
+    @if (result$ | async; as result){
+    <span style="text-align: center">Resultados</span>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <div fxLayout="row wrap" fxLayoutGap="10px" class="result-container">
+        <mat-card
+          appearance="outlined"
+          *ngFor="let source of result.checkingSources"
+          ngClass="card"
+        >
+          <mat-card-content>{{ source.sourceSite }}</mat-card-content>
+          <mat-chip-set aria-label="Classificação" ngClass="set-chips">
+            <mat-chip class="chipo">
+              <span [ngClass]="checkVeridictColors(source.veridict)">
+                {{ source.veridict }}
+              </span>
+            </mat-chip>
+          </mat-chip-set>
+        </mat-card>
+      </div>
+    </div>
+    }
+  </div>
+  <div>
+    @if (result$ | async; as result){
+    <span style="text-align: center">Relacionados</span>
+    <div
+      *ngFor="let source of result.checkingSources"
+      fxLayout="row wrap"
+      fxLayoutGap="10px"
+    >
       <mat-card
         appearance="outlined"
-        *ngFor="let source of result.checkingSources"
+        *ngFor="let headline of source.relatedHeadlines"
         ngClass="card"
+        style="width: 30%"
       >
-        <mat-card-content>{{ source.sourceSite }}</mat-card-content>
-        <mat-chip-set aria-label="Classificação" ngClass="set-chips">
-          <mat-chip class="chipo">
-            <span [ngClass]="checkVeridictColors(source.veridict)">
-              {{ source.veridict }}
-            </span>
-          </mat-chip>
-        </mat-chip-set>
+        <mat-card-content style="text-wrap: wrap">{{
+          headline
+        }}</mat-card-content>
       </mat-card>
     </div>
+    }
   </div>
-  }
 </div>
