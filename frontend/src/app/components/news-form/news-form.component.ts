@@ -13,6 +13,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { NgClass } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-news-form',
@@ -29,6 +31,8 @@ import { NgClass } from '@angular/common';
     MatCardModule,
     MatChipsModule,
     NgClass,
+    MatIconModule,
+    MatSidenavModule,
   ],
   templateUrl: './news-form.component.html',
   styleUrl: './news-form.component.css',
@@ -38,8 +42,7 @@ export class NewsFormComponent {
 
   news: News = {
     id: 0,
-    title: '',
-    url: '',
+    keywords: '',
     checkingSources: [],
   };
 

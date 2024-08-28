@@ -1,67 +1,103 @@
-<div fxLayout="column" fxFil fxLayoutAlign="space-around center">
-  <div class="content" fxLayout="column" fxLayoutAlign="center center">
-    <form
-      (ngSubmit)="onSubmit()"
-      fxLayout="column"
-      fxLayoutAlign="space-around center "
-    >
-      <input
-        name="url"
-        [(ngModel)]="news.url"
-        placeholder="URL do artigo (opcional)"
-      />
-      <textarea
-        name="title"
-        [(ngModel)]="news.title"
-        placeholder="Título ou palavras-chave da notícia"
-      ></textarea>
+<div>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav mode="side" position="end" opened class="sidebar">
+      <div fxLayoutGap="10px">
+        @if (result$ | async; as result){
+        <span><strong>Relacionados</strong></span>
+        <div *ngFor="let source of result.checkingSources">
+          <div *ngFor="let headline of source.relatedHeadlines">
+            <p>{{ headline }}</p>
+          </div>
+        </div>
+        } @else {
+        <div>
+          <span><strong>Guia de uso</strong></span>
+          <p>Pesquise uma noticia por palavras-chave ou o título se souber</p>
+          <p>Depois, será mostrado o veridito de cada portal de notícia</p>
+        </div>
+        }
+      </div>
+    </mat-sidenav>
+    <div>
+      <div fxLayout="column">
+        <div class="content" fxLayout="column" fxLayoutAlign="">
+          <form
+            (ngSubmit)="onSubmit()"
+            fxLayout="column"
+            fxLayoutAlign="space-around center "
+          >
+            <textarea
+              name="title"
+              [(ngModel)]="news.keywords"
+              placeholder="Título ou palavras-chave da notícia"
+            >
+            </textarea>
 
-      <button type="submit" mat-raised-button>Enviar</button>
-    </form>
-  </div>
+            <button type="submit" mat-raised-button>Enviar</button>
+          </form>
+        </div>
+        <div fxLayout="column" class="result">
+          @if (result$ | async; as result){
+          <span style="text-align: center">Resultados</span>
+          <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <div
+              fxLayout="row wrap"
+              fxLayoutGap="10px"
+              class="result-container"
+            >
+              <mat-card
+                appearance="outlined"
+                *ngFor="let source of result.checkingSources"
+                ngClass="card"
+              >
+                <mat-card-content fxLayout="column">
+                  <div>
+                    {{ source.sourceSite }}
+                  </div>
+                  <div>
+                    <a href="{{ source.link }}" class="check-link">
+                      <mat-icon>open_in_new</mat-icon>
+                    </a>
+                  </div>
+                </mat-card-content>
+                <mat-chip-set aria-label="Classificação" ngClass="set-chips">
+                  <mat-chip class="chipo">
+                    <span [ngClass]="checkVeridictColors(source.veridict)">
+                      {{ source.veridict }}
+                    </span>
+                  </mat-chip>
+                </mat-chip-set>
+              </mat-card>
+            </div>
+          </div>
+          }
+        </div>
 
-  <div fxLayout="column">
-    @if (result$ | async; as result){
-    <span style="text-align: center">Resultados</span>
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
-      <div fxLayout="row wrap" fxLayoutGap="10px" class="result-container">
-        <mat-card
-          appearance="outlined"
-          *ngFor="let source of result.checkingSources"
-          ngClass="card"
-        >
-          <mat-card-content>{{ source.sourceSite }}</mat-card-content>
-          <mat-chip-set aria-label="Classificação" ngClass="set-chips">
-            <mat-chip class="chipo">
-              <span [ngClass]="checkVeridictColors(source.veridict)">
-                {{ source.veridict }}
-              </span>
-            </mat-chip>
-          </mat-chip-set>
-        </mat-card>
+        <!-- <div fxLayout="column" class="related-news">
+          @if (result$ | async; as result){
+          <span style="text-align: center">Relacionados</span>
+          <div
+            *ngFor="let source of result.checkingSources"
+            fxLayout="row "
+            fxLayoutGap="10px"
+            class="related-cards"
+            fxLayoutAlign="center"
+          >
+            <mat-card
+              appearance="outlined"
+              *ngFor="let headline of source.relatedHeadlines"
+              ngClass="card"
+              style="width: 50%"
+            >
+              <mat-card-content style="text-wrap: wrap">{{
+                headline
+              }}</mat-card-content>
+            </mat-card>
+          </div>
+          }
+        </div> -->
       </div>
     </div>
-    }
-  </div>
-  <div>
-    @if (result$ | async; as result){
-    <span style="text-align: center">Relacionados</span>
-    <div
-      *ngFor="let source of result.checkingSources"
-      fxLayout="row wrap"
-      fxLayoutGap="10px"
-    >
-      <mat-card
-        appearance="outlined"
-        *ngFor="let headline of source.relatedHeadlines"
-        ngClass="card"
-        style="width: 30%"
-      >
-        <mat-card-content style="text-wrap: wrap">{{
-          headline
-        }}</mat-card-content>
-      </mat-card>
-    </div>
-    }
-  </div>
+  </mat-sidenav-container>
 </div>

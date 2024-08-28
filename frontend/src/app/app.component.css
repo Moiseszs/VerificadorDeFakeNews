@@ -2,6 +2,14 @@ div {
   font-family: sans-serif;
 }
 
+body {
+  background-color: white;
+}
+
+.app-news-form {
+  background-color: red;
+}
+
 .mat-toolbar-row {
   margin-bottom: 6px;
   -webkit-box-shadow: 6px 10px 21px -19px rgba(120, 120, 120, 1);

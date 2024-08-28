@@ -2,10 +2,6 @@
   font-family: sans-serif;
 }
 
-.mat-mdc-form-field-focus-overlay {
-  background-color: white;
-}
-
 .content {
   display: block;
 }
@@ -16,8 +12,8 @@ form {
 
 input,
 textarea {
-  width: 40vh;
-  height: 7vh;
+  width: 80vh;
+  height: 30vh;
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -40,4 +36,16 @@ span.orange {
 
 .set-chips {
   padding: 5px;
+}
+
+.check-link {
+  text-decoration: none;
+}
+
+.related-news {
+  height: 100%;
+}
+
+.mat-drawer {
+  width: 200px;
 }

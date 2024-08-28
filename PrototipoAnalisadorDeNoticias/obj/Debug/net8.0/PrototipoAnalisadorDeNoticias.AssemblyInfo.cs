@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrototipoAnalisadorDeNoticias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edd2334ee3c59f2b439699b6e67f5498d27f16ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdf12f9779b6cc95c6809bb30e6c75fe72bf3299")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrototipoAnalisadorDeNoticias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrototipoAnalisadorDeNoticias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

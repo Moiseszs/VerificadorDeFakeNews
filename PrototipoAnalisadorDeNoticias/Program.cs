@@ -23,7 +23,7 @@ builder.Services.AddRateLimiter(limiter =>
             factory: partition => new FixedWindowRateLimiterOptions
             {
                 AutoReplenishment = true,
-                PermitLimit = 34,
+                PermitLimit = 80,
                 QueueLimit = 0,
                 Window = TimeSpan.FromDays(1)
             }));

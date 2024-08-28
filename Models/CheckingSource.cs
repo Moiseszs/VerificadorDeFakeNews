@@ -21,6 +21,8 @@ namespace Models
         public News News { get; set; }
 
         public string SourceSite { get; set; }
+
+        public string link { get; set; }
         
         public List<string>? relatedHeadlines { get; set; }
     }

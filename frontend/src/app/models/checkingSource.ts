@@ -3,5 +3,6 @@ export interface CheckingSource {
   veridict: string;
   newsId: number;
   sourceSite: string;
+  link: string;
   relatedHeadlines: string[];
 }

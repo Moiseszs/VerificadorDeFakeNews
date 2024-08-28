@@ -21,17 +21,18 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             search = _search;
         }
 
-        public async Task<String> GoogleSearchOfKeywords()
+        public async Task<string> GoogleSearchOfKeywords()
         {
             try
             {
                 var searchList = await search.GetFromSpecificSite(ESTADAO_SITENAME);
                 var selectedSearch = searchList.FirstOrDefault();
+                if (selectedSearch == null) return null;
                 return selectedSearch.link;
             }
             catch(Exception e)
             {
-                return "";
+                return null;
                 throw new Exception("Error finding results");
                 
             }
@@ -42,10 +43,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
 
         public async Task<News> VerifyNews()
         {
-            string pageLink = "";
             CheckingSource source = new CheckingSource();
 
-            pageLink = await GoogleSearchOfKeywords();
+            string pageLink = await GoogleSearchOfKeywords();
 
             if(pageLink == null)
             {
@@ -56,7 +56,9 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             var context = BrowsingContext.New(config);
             var document = await context.OpenAsync(pageLink);
             
-            source.SourceSite = ESTADAO_SITENAME;
+            source.SourceSite = "Estadão Verifica";
+
+            source.link = pageLink;
 
             source.relatedHeadlines = await GetRelatedInfo();
 
@@ -87,7 +89,6 @@ namespace PrototipoAnalisadorDeNoticias.Logic
                 news.checkingSources.Add(source);
             }
 
-            
 
             return news;
             

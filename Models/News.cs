@@ -14,10 +14,7 @@ namespace Models
         public long Id { get; set; }
 
         [Required]
-        public string Title { get; set;}
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? Url { get; set; }
+        public string Keywords { get; set;}
 
         [JsonInclude]
         public List<CheckingSource> checkingSources;

@@ -36,7 +36,7 @@ namespace PrototipoAnalisadorDeNoticias.Controllers
         [HttpPost]
         public async Task<ActionResult<News>> Post([FromBody] News news)
         {
-            Search search = new Search(news.Title);
+            Search search = new Search(news.Keywords);
             await search.FetchQuery();
             UolConfereScraper uolConfere = new UolConfereScraper(news, search);
             EstadaoVerificarScraper estadaoVerificar = new EstadaoVerificarScraper(news, search);

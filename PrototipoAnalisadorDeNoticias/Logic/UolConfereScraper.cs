@@ -41,7 +41,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             }
             catch(Exception e)
             {
-                return null;
+                return news;
             }
             
             var config = Configuration.Default.WithDefaultLoader();
@@ -49,9 +49,11 @@ namespace PrototipoAnalisadorDeNoticias.Logic
             var document = await context.OpenAsync(pageUrl);
             var bulletDivs = document.QuerySelectorAll("h2.bullet");
             CheckingSource source = new CheckingSource();
-            source.SourceSite = UOL_SITENAME;
+            source.SourceSite = "Uol Confere";
 
             source.relatedHeadlines = await GetRelatedInfo();
+
+            source.link = pageUrl;
 
             foreach(var h in bulletDivs)
             {

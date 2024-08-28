@@ -9,6 +9,15 @@ body {
 body {
   margin: 0;
   height: 100%;
-  width: 100vw;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: white;
+}
+
+app-news-form {
+  height: 200%;
+  display: block;
+}
+
+app-root {
+  display: block;
 }
