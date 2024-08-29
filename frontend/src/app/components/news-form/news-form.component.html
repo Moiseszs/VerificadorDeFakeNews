@@ -2,7 +2,7 @@
   <mat-sidenav-container class="example-container">
     <mat-sidenav>Start</mat-sidenav>
     <mat-sidenav mode="side" position="end" opened class="sidebar">
-      <div fxLayoutGap="10px">
+      <div fxLayoutGap="10px" class="related-news-container">
         @if (result$ | async; as result){
         <span><strong>Relacionados</strong></span>
         <div *ngFor="let source of result.checkingSources">
