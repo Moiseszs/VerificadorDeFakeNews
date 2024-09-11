@@ -14,7 +14,7 @@ body {
 }
 
 app-news-form {
-  height: 200%;
+  height: fit-content;
   display: block;
 }
 

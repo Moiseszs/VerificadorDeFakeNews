@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 import { News } from '../../models/news';
 import { PostNewsService } from '../../services/post-news.service';
@@ -40,6 +41,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 export class NewsFormComponent {
   postService: PostNewsService;
 
+  mediaQuery: MediaQueryList;
+
   news: News = {
     id: 0,
     keywords: '',
@@ -52,8 +55,16 @@ export class NewsFormComponent {
     this.result$ = this.postService.doPost(this.news);
   }
 
+  private _mobileQueryListener: () => void;
+
   constructor(private http: HttpClient) {
     this.postService = new PostNewsService(http);
+
+    const media = inject(MediaMatcher);
+    const changeDetectorRef = inject(ChangeDetectorRef);
+    this.mediaQuery = media.matchMedia('(max-width:600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mediaQuery.addEventListener('change', this._mobileQueryListener);
   }
 
   checkVeridictColors(veridict: string): string {

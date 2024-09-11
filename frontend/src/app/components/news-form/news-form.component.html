@@ -1,7 +1,17 @@
 <div>
+  <div style="display: flex; justify-content: flex-end">
+    <button class="toggle-btn" mat-icon-buttton (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
   <mat-sidenav-container class="example-container">
-    <mat-sidenav>Start</mat-sidenav>
-    <mat-sidenav mode="side" position="end" opened class="sidebar">
+    <mat-sidenav
+      [mode]="mediaQuery.matches ? 'over' : 'side'"
+      position="end"
+      opened
+      class="sidebar"
+      #sidenav
+    >
       <div fxLayoutGap="10px" class="related-news-container">
         @if (result$ | async; as result){
         <span><strong>Relacionados</strong></span>

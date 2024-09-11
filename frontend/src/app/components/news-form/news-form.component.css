@@ -12,10 +12,10 @@ form {
 
 input,
 textarea {
-  width: 80vh;
+  width: 50vw;
   height: 30vh;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 2rem;
 }
 
 input {
@@ -52,4 +52,8 @@ span.orange {
 
 .related-news-container {
   padding: 2px;
+}
+.toggle-btn {
+  background-color: white;
+  border: 0px;
 }
