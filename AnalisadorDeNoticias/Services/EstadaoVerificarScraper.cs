@@ -19,7 +19,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
         {
             news = _news;
             search = _search;
-            this.Sitename = "estadao.com.br/estadao-verifica/";
+            this.Sitename = "www.estadao.com.br";
         }
 
         public override async Task<string> GoogleSearchOfKeywords()
@@ -50,7 +50,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
 
             if(pageLink == null)
             {
-                return null;
+                return news;
             }
 
             var config = Configuration.Default.WithDefaultLoader();
