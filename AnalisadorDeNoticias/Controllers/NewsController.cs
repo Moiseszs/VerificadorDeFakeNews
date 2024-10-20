@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Models;
-using PrototipoAnalisadorDeNoticias.Logic;
+using PrototipoAnalisadorDeNoticias.Services;
 using AngleSharp;
 using System.Reflection.Metadata;
 using OpenQA.Selenium;
@@ -15,7 +15,7 @@ namespace PrototipoAnalisadorDeNoticias.Controllers
     [ApiController]
     public class NewsController : ControllerBase
     {
-
+        // Mudar para GET?
         // POST api/<NewsController>
         [HttpPost("/")]
         public async Task<ActionResult<News>> Post([FromBody] News news)
@@ -32,12 +32,6 @@ namespace PrototipoAnalisadorDeNoticias.Controllers
 
         }
 
-
-
-        // DELETE api/<NewsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
-}
+

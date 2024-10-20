@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Models.RecordModels;
+using System.Runtime.CompilerServices;
 
-namespace PrototipoAnalisadorDeNoticias.Logic
+namespace PrototipoAnalisadorDeNoticias.Services
 {
-    public class EstadaoVerificarScraper : IScraper
+    public class EstadaoVerificarScraper : Scraper
     {
 
-        private const string ESTADAO_SITENAME = "www.estadao.com.br";
 
         private News news { get; set; }
 
@@ -19,13 +19,14 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         {
             news = _news;
             search = _search;
+            this.Sitename = "estadao.com.br/estadao-verifica/";
         }
 
-        public async Task<string> GoogleSearchOfKeywords()
+        public override async Task<string> GoogleSearchOfKeywords()
         {
             try
             {
-                var searchList = await search.GetFromSpecificSite(ESTADAO_SITENAME);
+                var searchList = await search.GetFromSpecificSite(this.Sitename);
                 var selectedSearch = searchList.FirstOrDefault();
                 if (selectedSearch == null) return null;
                 return selectedSearch.link;
@@ -41,7 +42,7 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         }
 
 
-        public async Task<News> VerifyNews()
+        public override async Task<News> VerifyNews()
         {
             CheckingSource source = new CheckingSource();
 

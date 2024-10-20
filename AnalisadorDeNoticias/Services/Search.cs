@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 
-namespace PrototipoAnalisadorDeNoticias.Logic
+namespace PrototipoAnalisadorDeNoticias.Services
 {
     public class Search
     {

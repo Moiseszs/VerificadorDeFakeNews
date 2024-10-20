@@ -8,12 +8,10 @@ using AngleSharp.Html.Dom;
 using Models.RecordModels;
 using OpenQA.Selenium.DevTools.V125.WebAudio;
 
-namespace PrototipoAnalisadorDeNoticias.Logic
+namespace PrototipoAnalisadorDeNoticias.Services
 {
-    public class UolConfereScraper 
+    public class UolConfereScraper : Scraper
     {
-
-        private const string UOL_SITENAME = "noticias.uol.com.br";
         public News news { get; set; }
         private Search search;
 
@@ -21,18 +19,19 @@ namespace PrototipoAnalisadorDeNoticias.Logic
         {
             news = _news;
             search = _search;
+            this.Sitename = "noticias.uol.com.br";
         }
 
-        public async Task<String> GoogleSearchOfKeywords()
+        public override async Task<String> GoogleSearchOfKeywords()
         {
             
-            var searchList = await search.GetFromSpecificSite(UOL_SITENAME);
+            var searchList = await search.GetFromSpecificSite(this.Sitename);
             var selectedSearch = searchList.FirstOrDefault();
             return selectedSearch.link;
 
         }
 
-        public async Task<News> VerifyNews()
+        public override async Task<News> VerifyNews()
         {
             string pageUrl;
             try

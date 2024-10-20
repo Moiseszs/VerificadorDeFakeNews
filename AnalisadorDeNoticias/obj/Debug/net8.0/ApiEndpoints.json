@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "PrototipoAnalisadorDeNoticias.Controllers.NewsController",
+    "Method": "Post",
+    "RelativePath": "",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "news",
+        "Type": "Models.News",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Models.News",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
