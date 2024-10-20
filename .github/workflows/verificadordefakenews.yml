@@ -5,7 +5,7 @@ on:
     - v2
 env:
   AZURE_WEBAPP_NAME: verificadordefakenews
-  AZURE_WEBAPP_PACKAGE_PATH: PrototipoAnalisadorDeNoticias\publish
+  AZURE_WEBAPP_PACKAGE_PATH: AnalisadorDeNoticias\publish
   AZURE_APIM_RESOURCE_PATH: /
   AZURE_APIM_RESOURCEGROUP: VerificadorDeFakeNews
   AZURE_APIM_SERVICENAME: PrototipoAnalisadorDeNoticiasapi
@@ -13,12 +13,12 @@ env:
   AZURE_APIM_APPSERVICEURL: https://verificadordefakenews.azurewebsites.net
   SWASHBUCLE_ASPNET_CORE_CLI_PACKAGE_VERSION: 6.4.0
   SWASHBUCKLE_DOTNET_CORE_VERSION: 8.0.x
-  API_IMPORT_SPECIFICATION_PATH: PrototipoAnalisadorDeNoticias\publish\swagger.json
-  API_IMPORT_DLL: PrototipoAnalisadorDeNoticias\bin\Release\net8.0\PrototipoAnalisadorDeNoticias.dll
+  API_IMPORT_SPECIFICATION_PATH: AnalisadorDeNoticias\publish\swagger.json
+  API_IMPORT_DLL: AnalisadorDeNoticias\bin\Release\net8.0\AnalisadorDeNoticias.dll
   API_IMPORT_VERSION: v1
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
-  WORKING_DIRECTORY: PrototipoAnalisadorDeNoticias
+  WORKING_DIRECTORY: AnalisadorDeNoticias
 jobs:
   build:
     runs-on: windows-latest
