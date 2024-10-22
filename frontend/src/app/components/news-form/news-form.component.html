@@ -1,5 +1,7 @@
-<div>
-  <div style="display: flex; justify-content: flex-end">
+<div style="background-color: inherit">
+  <div
+    style="display: flex; justify-content: flex-end; background-color: #fdfbff"
+  >
     <button class="toggle-btn" mat-icon-buttton (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
@@ -7,8 +9,7 @@
   <mat-sidenav-container class="example-container">
     <mat-sidenav
       [mode]="mediaQuery.matches ? 'over' : 'side'"
-      position="end"
-      opened
+      [position]="mediaQuery.matches ? 'end' : 'end'"
       class="sidebar"
       #sidenav
     >
@@ -31,20 +32,27 @@
     </mat-sidenav>
     <div>
       <div fxLayout="column">
-        <div class="content" fxLayout="column" fxLayoutAlign="">
+        <div
+          class="content"
+          fxLayout="column"
+          fxLayoutAlign=""
+          [style]="mediaQuery.matches ? 'padding: 12vh' : 'padding: 0vh'"
+        >
           <form
             (ngSubmit)="onSubmit()"
             fxLayout="column"
+            ngDefaultControl
             fxLayoutAlign="space-around center "
           >
             <textarea
               name="title"
               [(ngModel)]="news.keywords"
               placeholder="Título ou palavras-chave da notícia"
+              required
             >
             </textarea>
 
-            <button type="submit" mat-raised-button>Enviar</button>
+            <button type="submit" mat-raised-button>Checar</button>
           </form>
         </div>
         <div fxLayout="column" class="result">

@@ -10,7 +10,7 @@ body {
   margin: 0;
   height: 100%;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: white;
+  background-color: #fdfbff;
 }
 
 app-news-form {
@@ -20,4 +20,8 @@ app-news-form {
 
 app-root {
   display: block;
+}
+
+.mat-typography {
+  background-color: #fdfbff;
 }

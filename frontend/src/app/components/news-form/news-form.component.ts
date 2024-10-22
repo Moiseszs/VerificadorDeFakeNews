@@ -52,6 +52,10 @@ export class NewsFormComponent {
   result$!: Observable<News>;
 
   async onSubmit() {
+    if (this.news.keywords == '') {
+      // alert('Insira uma entrada válida, por favor.');
+      return;
+    }
     this.result$ = this.postService.doPost(this.news);
   }
 
