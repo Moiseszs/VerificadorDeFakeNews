@@ -66,7 +66,9 @@ export class NewsFormComponent {
 
     const media = inject(MediaMatcher);
     const changeDetectorRef = inject(ChangeDetectorRef);
-    this.mediaQuery = media.matchMedia('(max-width:720px)');
+    this.mediaQuery = media.matchMedia(
+      '(max-width:720px) and (max-height: 1600)'
+    );
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mediaQuery.addEventListener('change', this._mobileQueryListener);
   }
