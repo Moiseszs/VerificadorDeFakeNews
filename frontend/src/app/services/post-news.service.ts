@@ -3,6 +3,7 @@ import { News } from '../models/news';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
+import { Headlines } from '../models/headlines';
 @Injectable({
   providedIn: 'root',
 })
@@ -19,9 +20,7 @@ export class PostNewsService {
     return this.http.post<News>(environment.apiUrl, news);
   }
 
-  async Get() {
-    return this.http
-      .get<string>(`${environment.apiUrl}/api/news`)
-      .subscribe((data) => console.log(data));
+  doGetRelatedHeadlines(): Observable<Headlines> {
+    return this.http.get<Headlines>(environment.apiUrl + 'related-news');
   }
 }

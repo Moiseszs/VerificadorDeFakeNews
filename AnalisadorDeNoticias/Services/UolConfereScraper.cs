@@ -21,10 +21,14 @@ namespace PrototipoAnalisadorDeNoticias.Services
             search = _search;
             this.Sitename = "noticias.uol.com.br";
         }
+        
+        public UolConfereScraper()
+        {
+
+        }
 
         public override async Task<String> GoogleSearchOfKeywords()
         {
-            
             var searchList = await search.GetFromSpecificSite(this.Sitename);
             var selectedSearch = searchList.FirstOrDefault();
             return selectedSearch.link;
@@ -88,26 +92,28 @@ namespace PrototipoAnalisadorDeNoticias.Services
         public async Task<List<string>> GetRelatedInfo()
         {
 
-            string pageLink = await GoogleSearchOfKeywords();
+            //string pageLink = await GoogleSearchOfKeywords();
 
-
+            var url = "https://noticias.uol.com.br/confere/";
             var config = Configuration.Default.WithDefaultLoader();
             var context = BrowsingContext.New(config);
-            var document = await context.OpenAsync(pageLink);
+            var document = await context.OpenAsync(url);
 
 
             var content = document.
-                QuerySelectorAll(".mt-100.mt-150-lg.container  .solar-related.type-main  .container-main.column div");
+                QuerySelectorAll("body > div.collection-standard > section.latest-news-banner > section > div > div > div.col-sm-24.col-md-16.col-lg-17 > section > div > div > div > div > div > div > a > div > h3");
 
-            content = content;
+            //content = content;
 
 
             List<string> headlines = new List<string>();
 
-            foreach(var div in content)
+            foreach (var div in content)
             {
                 headlines.Add(div.TextContent);
             }
+
+            Console.Write(headlines[0]);
 
             return headlines;
         }

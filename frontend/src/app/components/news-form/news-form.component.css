@@ -13,9 +13,10 @@ form {
 input,
 textarea {
   width: 50vw;
-  height: 30vh;
+  height: 3vh;
   margin-bottom: 20px;
-  padding: 2rem;
+  padding: 20px;
+  margin-right: 10px;
 }
 
 input {

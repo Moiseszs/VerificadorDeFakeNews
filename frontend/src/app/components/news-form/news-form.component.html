@@ -1,35 +1,5 @@
 <div style="background-color: inherit">
-  <div
-    style="display: flex; justify-content: flex-end; background-color: #fdfbff"
-  >
-    <button class="toggle-btn" mat-icon-buttton (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </div>
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav
-      [mode]="mediaQuery.matches ? 'over' : 'side'"
-      [position]="mediaQuery.matches ? 'end' : 'end'"
-      class="sidebar"
-      #sidenav
-    >
-      <div fxLayoutGap="10px" class="related-news-container">
-        @if (result$ | async; as result){
-        <span><strong>Relacionados</strong></span>
-        <div *ngFor="let source of result.checkingSources">
-          <div *ngFor="let headline of source.relatedHeadlines">
-            <p>{{ headline }}</p>
-          </div>
-        </div>
-        } @else {
-        <div>
-          <span><strong>Guia de uso</strong></span>
-          <p>Pesquise uma noticia por palavras-chave ou o título se souber</p>
-          <p>Depois, será mostrado o veridito de cada portal de notícia</p>
-        </div>
-        }
-      </div>
-    </mat-sidenav>
+  <div>
     <div>
       <div fxLayout="column">
         <div
@@ -40,24 +10,27 @@
         >
           <form
             (ngSubmit)="onSubmit()"
-            fxLayout="column"
+            fxLayout="row"
             ngDefaultControl
-            fxLayoutAlign="space-around center "
+            fxLayoutAlign="center "
           >
-            <textarea
+            <input
               name="title"
               [(ngModel)]="news.keywords"
+              style="width: 40%"
               placeholder="Título ou palavras-chave da notícia"
               required
-            >
-            </textarea>
+            />
 
-            <button type="submit" mat-raised-button>Checar</button>
+            <button type="submit" style="margin-top: 5px" mat-raised-button>
+              Checar
+            </button>
           </form>
         </div>
         <div fxLayout="column" class="result">
-          @if (result$ | async; as result){
-          <span style="text-align: center">Resultados</span>
+          @if(result$ | async; as result ){
+          <app-check-card [result]="result"></app-check-card>
+          <!-- <span style="text-align: center">Resultados</span>
           <div fxLayout="row wrap" fxLayoutAlign="center center">
             <div
               fxLayout="row wrap"
@@ -87,7 +60,16 @@
                   </mat-chip>
                 </mat-chip-set>
               </mat-card>
-            </div>
+            </div> -->
+          <!-- </div> -->
+          } @else{
+
+          <div
+            [style]="
+              isLoading ? 'display: block; text-align: center' : 'display:none'
+            "
+          >
+            <span style="color: rgb(83, 83, 83)">Carregando Resultados...</span>
           </div>
           }
         </div>
@@ -97,7 +79,7 @@
           <span style="text-align: center">Relacionados</span>
           <div
             *ngFor="let source of result.checkingSources"
-            fxLayout="row "
+            fxLayout="row"
             fxLayoutGap="10px"
             class="related-cards"
             fxLayoutAlign="center"
@@ -106,16 +88,37 @@
               appearance="outlined"
               *ngFor="let headline of source.relatedHeadlines"
               ngClass="card"
-              style="width: 50%"
+              style="width: 70%; height: 40%"
             >
-              <mat-card-content style="text-wrap: wrap">{{
+              <mat-card-content style="text-wrap: wrap; font-size: small">{{
                 headline
               }}</mat-card-content>
             </mat-card>
           </div>
+          } -->
+
+        <mat-grid-list cols="3" rowHeight="200px">
+          @if (headlines$ | async; as headlines){
+          <mat-grid-tile
+            *ngFor="let headline of headlines.headlines"
+            style="max-width: 100%"
+          >
+            <p>{{ headline }}</p>
+
+            <mat-grid-tile-footer
+              style="
+                background-color: white;
+                color: black;
+                padding: 0px;
+                color: rgb(116, 115, 115);
+              "
+              >Uol Confere</mat-grid-tile-footer
+            >
+          </mat-grid-tile>
+
           }
-        </div> -->
+        </mat-grid-list>
       </div>
     </div>
-  </mat-sidenav-container>
+  </div>
 </div>

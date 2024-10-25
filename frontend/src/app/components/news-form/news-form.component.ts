@@ -1,11 +1,15 @@
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 import { News } from '../../models/news';
 import { PostNewsService } from '../../services/post-news.service';
-import { HttpClient } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpInterceptor,
+  HttpInterceptorFn,
+} from '@angular/common/http';
 import { AsyncPipe, NgFor } from '@angular/common';
-import { Observable } from 'rxjs';
+import { finalize, Observable } from 'rxjs';
 import { MatButton } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,9 +17,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { CheckCardComponent } from '../check-card/check-card.component';
+import { Headlines } from '../../models/headlines';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-news-form',
@@ -32,14 +39,24 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatCardModule,
     MatChipsModule,
     NgClass,
+    NgIf,
     MatIconModule,
     MatSidenavModule,
+    CheckCardComponent,
+    MatGridListModule,
   ],
   templateUrl: './news-form.component.html',
   styleUrl: './news-form.component.css',
 })
-export class NewsFormComponent {
+export class NewsFormComponent implements OnInit {
   postService: PostNewsService;
+  result$!: Observable<News>;
+  headlines$!: Observable<Headlines>;
+  isLoading: boolean = false;
+
+  ngOnInit(): void {
+    this.headlines$ = this.postService.doGetRelatedHeadlines();
+  }
 
   mediaQuery: MediaQueryList;
 
@@ -49,13 +66,12 @@ export class NewsFormComponent {
     checkingSources: [],
   };
 
-  result$!: Observable<News>;
-
   async onSubmit() {
     if (this.news.keywords == '') {
       // alert('Insira uma entrada válida, por favor.');
       return;
     }
+    this.isLoading = true;
     this.result$ = this.postService.doPost(this.news);
   }
 
@@ -71,17 +87,5 @@ export class NewsFormComponent {
     );
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mediaQuery.addEventListener('change', this._mobileQueryListener);
-  }
-
-  checkVeridictColors(veridict: string): string {
-    if (veridict === 'enganoso') {
-      return 'red';
-    } else if (veridict === 'distorcido') {
-      return 'orange';
-    } else if (veridict === 'indefindo') {
-      return 'grey';
-    }
-
-    return '';
   }
 }
