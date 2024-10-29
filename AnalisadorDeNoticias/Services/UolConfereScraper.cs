@@ -7,6 +7,7 @@ using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using Models.RecordModels;
 using OpenQA.Selenium.DevTools.V125.WebAudio;
+using System.Net;
 
 namespace PrototipoAnalisadorDeNoticias.Services
 {
@@ -46,7 +47,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
             {
                 return news;
             }
-            
+
             var config = Configuration.Default.WithDefaultLoader();
             var context = BrowsingContext.New(config);
             var document = await context.OpenAsync(pageUrl);
@@ -89,11 +90,10 @@ namespace PrototipoAnalisadorDeNoticias.Services
             return news;
         }
 
+
+        // A ser removida
         public async Task<List<string>> GetRelatedInfo()
         {
-
-            //string pageLink = await GoogleSearchOfKeywords();
-
             var url = "https://noticias.uol.com.br/confere/";
             var config = Configuration.Default.WithDefaultLoader();
             var context = BrowsingContext.New(config);
@@ -102,9 +102,8 @@ namespace PrototipoAnalisadorDeNoticias.Services
 
             var content = document.
                 QuerySelectorAll("body > div.collection-standard > section.latest-news-banner > section > div > div > div.col-sm-24.col-md-16.col-lg-17 > section > div > div > div > div > div > div > a > div > h3");
-
             //content = content;
-
+            var title = document.Title;
 
             List<string> headlines = new List<string>();
 
@@ -113,7 +112,6 @@ namespace PrototipoAnalisadorDeNoticias.Services
                 headlines.Add(div.TextContent);
             }
 
-            Console.Write(headlines[0]);
 
             return headlines;
         }

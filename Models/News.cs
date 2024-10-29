@@ -10,8 +10,6 @@ namespace Models
 {
     public class News
     {
-        [Key]
-        public long Id { get; set; }
 
         [Required]
         public string Keywords { get; set;}

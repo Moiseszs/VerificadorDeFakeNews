@@ -53,6 +53,7 @@ export class NewsFormComponent implements OnInit {
   result$!: Observable<News>;
   headlines$!: Observable<Headlines>;
   isLoading: boolean = false;
+  isSubmited: boolean = false;
 
   ngOnInit(): void {
     this.headlines$ = this.postService.doGetRelatedHeadlines();
@@ -72,6 +73,7 @@ export class NewsFormComponent implements OnInit {
       return;
     }
     this.isLoading = true;
+    this.isSubmited = true;
     this.result$ = this.postService.doPost(this.news);
   }
 

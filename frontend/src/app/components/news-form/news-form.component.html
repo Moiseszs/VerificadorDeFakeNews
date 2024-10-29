@@ -27,6 +27,15 @@
             </button>
           </form>
         </div>
+        <div
+          [style]="isSubmited ? 'display: none' : 'display: block'"
+          style="text-align: center"
+        >
+          <p style="color: rgb(49, 47, 47)">
+            Digite o título ou palavras-chave de uma <br />manchete para checar
+            se é verdadeira
+          </p>
+        </div>
         <div fxLayout="column" class="result">
           @if(result$ | async; as result ){
           <app-check-card [result]="result"></app-check-card>
@@ -74,9 +83,13 @@
           }
         </div>
 
-        <!-- <div fxLayout="column" class="related-news">
-          @if (result$ | async; as result){
-          <span style="text-align: center">Relacionados</span>
+        <mat-grid-list cols="3" rowHeight="200px">
+          @if (result$| async; as result){ @if(result.checkingSources.length){
+
+          <span style="text-align: center; display: block; margin: 10px"
+            >Relacionados</span
+          >
+          <br />
           <div
             *ngFor="let source of result.checkingSources"
             fxLayout="row"
@@ -84,39 +97,26 @@
             class="related-cards"
             fxLayoutAlign="center"
           >
-            <mat-card
+            <mat-grid-tile
               appearance="outlined"
               *ngFor="let headline of source.relatedHeadlines"
               ngClass="card"
-              style="width: 70%; height: 40%"
+              style="max-width: 100%"
             >
-              <mat-card-content style="text-wrap: wrap; font-size: small">{{
-                headline
-              }}</mat-card-content>
-            </mat-card>
+              <p>{{ headline }}</p>
+
+              <mat-grid-tile-footer
+                style="
+                  background-color: white;
+                  color: black;
+                  padding: 0px;
+                  color: rgb(116, 115, 115);
+                "
+                >{{ source.sourceSite }}</mat-grid-tile-footer
+              >
+            </mat-grid-tile>
           </div>
-          } -->
-
-        <mat-grid-list cols="3" rowHeight="200px">
-          @if (headlines$ | async; as headlines){
-          <mat-grid-tile
-            *ngFor="let headline of headlines.headlines"
-            style="max-width: 100%"
-          >
-            <p>{{ headline }}</p>
-
-            <mat-grid-tile-footer
-              style="
-                background-color: white;
-                color: black;
-                padding: 0px;
-                color: rgb(116, 115, 115);
-              "
-              >Uol Confere</mat-grid-tile-footer
-            >
-          </mat-grid-tile>
-
-          }
+          } }
         </mat-grid-list>
       </div>
     </div>

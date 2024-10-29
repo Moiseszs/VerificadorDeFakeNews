@@ -31,16 +31,6 @@ namespace PrototipoAnalisadorDeNoticias.Controllers
 
 
         }
-
-        [HttpGet("/related-news")]
-        public async Task<ActionResult> GetRelatedHeadlines()
-        {
-            UolConfereScraper uolConfere = new UolConfereScraper();
-            var headlines = await uolConfere.GetRelatedInfo();
-            
-            return Ok(new { headlines });
-        }
-
-        }
     }
+}
 
