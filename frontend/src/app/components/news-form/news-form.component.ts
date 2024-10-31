@@ -3,11 +3,6 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 import { News } from '../../models/news';
 import { PostNewsService } from '../../services/post-news.service';
-import {
-  HttpClient,
-  HttpInterceptor,
-  HttpInterceptorFn,
-} from '@angular/common/http';
 import { AsyncPipe, NgFor } from '@angular/common';
 import { finalize, Observable } from 'rxjs';
 import { MatButton } from '@angular/material/button';
@@ -23,6 +18,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CheckCardComponent } from '../check-card/check-card.component';
 import { Headlines } from '../../models/headlines';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {
+  HttpClient,
+  HttpInterceptor,
+  HttpInterceptorFn,
+} from '@angular/common/http';
 
 @Component({
   selector: 'app-news-form',

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnalisadorDeNoticias", "AnalisadorDeNoticias\AnalisadorDeNoticias.csproj", "{44C9653E-2DAF-4CAB-9AF9-2981ACE4C088}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteScrape", "TesteScrape\TesteScrape.csproj", "{61AE4D73-438E-45F1-AD20-84ACD7632533}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{44C9653E-2DAF-4CAB-9AF9-2981ACE4C088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C9653E-2DAF-4CAB-9AF9-2981ACE4C088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C9653E-2DAF-4CAB-9AF9-2981ACE4C088}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61AE4D73-438E-45F1-AD20-84ACD7632533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61AE4D73-438E-45F1-AD20-84ACD7632533}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61AE4D73-438E-45F1-AD20-84ACD7632533}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61AE4D73-438E-45F1-AD20-84ACD7632533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
