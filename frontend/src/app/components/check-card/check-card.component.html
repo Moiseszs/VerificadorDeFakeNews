@@ -1,0 +1,36 @@
+<div fxLayout="column" class="result">
+  @if(result?.checkingSources?.length){
+  <span style="text-align: center">Resultados</span>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutGap="10px" class="result-container">
+      <mat-card
+        appearance="outlined"
+        *ngFor="let source of result?.checkingSources"
+        ngClass="card"
+      >
+        <mat-card-content fxLayout="column">
+          <div>
+            {{ source.sourceSite }}
+          </div>
+          <div>
+            <a href="{{ source.link }}" class="check-link" target="_blank">
+              <mat-icon>open_in_new</mat-icon>
+            </a>
+          </div>
+        </mat-card-content>
+        <mat-chip-set aria-label="Classificação" ngClass="set-chips">
+          <mat-chip class="chipo">
+            <span [ngClass]="checkVeridictColors(source.veridict)">
+              {{ source.veridict }}
+            </span>
+          </mat-chip>
+        </mat-chip-set>
+      </mat-card>
+    </div>
+  </div>
+  } @else {
+  <span style="text-align: center; color: rgb(117, 116, 116)"
+    >Não houve resultados para a pesquisa :(
+  </span>
+  }
+</div>

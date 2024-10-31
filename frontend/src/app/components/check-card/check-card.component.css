@@ -1,0 +1,39 @@
+span.red {
+  color: rgba(221, 48, 48, 0.932);
+}
+
+span.orange {
+  color: rgb(196, 137, 29);
+}
+
+.card {
+  padding: 5px;
+}
+
+.set-chips {
+  padding: 5px;
+}
+
+.check-link {
+  text-decoration: none;
+}
+
+.related-news {
+  height: 100%;
+}
+
+.mat-drawer {
+  width: 200px;
+}
+
+.related-news-container {
+  padding: 2px;
+}
+.toggle-btn {
+  background-color: white;
+  border: 0px;
+}
+
+.mat-grid-tile-content {
+  justify-content: start;
+}
