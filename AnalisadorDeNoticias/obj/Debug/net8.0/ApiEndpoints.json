@@ -24,15 +24,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "PrototipoAnalisadorDeNoticias.Controllers.NewsController",
-    "Method": "GetRelatedHeadlines",
-    "RelativePath": "related-news",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
   }
 ]
