@@ -6,8 +6,8 @@ name: Build and deploy ASP.Net Core app to Azure Web App - verificadordefakenews
 on:
   push:
     branches:
-      - v2
       - main
+      - v2
   workflow_dispatch:
 
 jobs:
