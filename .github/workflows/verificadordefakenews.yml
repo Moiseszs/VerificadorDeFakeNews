@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - v2
+    - main
 env:
   AZURE_WEBAPP_NAME: verificadordefakenews
   AZURE_WEBAPP_PACKAGE_PATH: AnalisadorDeNoticias\publish
