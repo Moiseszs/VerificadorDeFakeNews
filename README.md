@@ -9,7 +9,7 @@ A sua principal rota:
 ```curl
   POST /
 ```
- Requer um corpo de requesito que contenha a manchete ou palavras-chave.
+A requsição deve conter um corpo de mensagem que contenha as palavras-chave da manchete.
  
 Body:
 ```
