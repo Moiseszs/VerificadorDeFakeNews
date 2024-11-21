@@ -57,3 +57,26 @@ Resposta:
     ]
 }
 ```
+
+
+## Frontend
+
+Há também uma versão web visual feita em Angular que consome a API.
+
+<kbd>
+<img src="screenshots/captura-tela-2.png" style="margin: 100px">
+</kbd>
+
+<br>
+<br>
+
+<kbd>
+<img src="screenshots/captura-tela-2-2.png">
+</kbd>
+
+<br>
+<br>
+
+<kbd>
+<img src="screenshots/captura-tela-3-2.png">
+</kbd>
