@@ -16,6 +16,8 @@ namespace Models
         [JsonIgnore]
         public News News { get; set; }
 
+        public string headline { get; set; }
+
         public string SourceSite { get; set; }
 
         public string link { get; set; }

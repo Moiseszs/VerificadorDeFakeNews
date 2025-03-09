@@ -48,6 +48,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
 
             string pageLink = await GoogleSearchOfKeywords();
 
+
             if(pageLink == null)
             {
                 return news;
@@ -61,6 +62,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
 
             source.link = pageLink;
 
+
             source.relatedHeadlines = await GetRelatedInfo();
 
             string statement = "O Estadão Verifica investigou e concluiu que";
@@ -70,6 +72,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
                 document.Body.TextContent.Contains($"{statement}: é falso"))
             {
                 source.News = news;
+                source.headline = document.Title;
                 source.Veridict = "enganoso";
                 news.checkingSources.Add(source);
                 return news;
@@ -80,6 +83,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
             {
                 source.News = news;
                 source.Veridict = "verdadeiro";
+                source.headline = document.Title;
                 news.checkingSources.Add(source);
                 return news;
             }

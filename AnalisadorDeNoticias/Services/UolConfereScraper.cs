@@ -66,6 +66,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
                 {
                     source.News = news;
                     source.Veridict = "enganoso";
+                    source.headline = document.Title;
                     news.checkingSources.Add(source);
                     return news;
                 }
@@ -73,6 +74,7 @@ namespace PrototipoAnalisadorDeNoticias.Services
                 {
                     source.News = news;
                     source.Veridict = "distorcido";
+                    source.headline = document.Title;
                     news.checkingSources.Add(source);
                     return news;
                 }
